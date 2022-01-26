@@ -22,7 +22,7 @@ Are you a person looking for a job? Are you having trouble tracking all the plac
 ![](planning/add-job-form.jpg)
 ![](planning/update-job-form.jpg)
 
-## MVP and Beyond
+## Beyond MVP
 
 ### Project Description
 
