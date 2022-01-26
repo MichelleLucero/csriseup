@@ -7,12 +7,11 @@
 Are you a person looking for a job? Are you having trouble tracking all the places you applied to? Look no further! We have your back! You can track all you application in one place and be organized throughout your job search process
 
 ### User Stories
-- As a user,, I should be able to add a job
-- As a user, I should be able to update my status for a job
-- As a user, I should be able to see all the jobs I've added in the past.
-- As a user, I should be able to see the current jobs (open opportunies) I'm looking into.
-- As a user, I should be able to see the past jobs (closed opportunities) I've looked at.
-
+- As a user, I should be able to add a job.
+- As a user, I should be able to update my status for a job.
+- As a user, I should be able to update a to no longer interested or rejected, so that I can focus on the jobs I'm currently applying to.
+- As a user, I should be able to filter the jobs by closed opportunities, so that I reference the jobs that I've applied to in the past.
+- As a user, I should be able to filter the jobs by open opportunities, so that I can focus on the jobs I'm currently applying to.
 ### ERD
 
 ![](planning/erd.png)
