@@ -12,6 +12,10 @@ Are you a person looking for a job? Are you having trouble tracking all the plac
 
 ### Wireframes
 
+![](planning/home.jpg)
+![](planning/add-job-form.jpg)
+![](planning/update-job-form.jpg)
+
 ## MVP and Beyond
 
 ### Project Description
