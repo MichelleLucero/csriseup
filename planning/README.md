@@ -14,13 +14,13 @@ Are you a person looking for a job? Are you having trouble tracking all the plac
 - As a user, I should be able to filter the jobs by open opportunities, so that I can focus on the jobs I'm currently applying to.
 ### ERD
 
-![](planning/erd.png)
+![](erd.png)
 
 ### Wireframes
 
-![](planning/home.jpg)
-![](planning/add-job-form.jpg)
-![](planning/update-job-form.jpg)
+![](home.jpg)
+![](add-job-form.jpg)
+![](update-job-form.jpg)
 
 ## Beyond MVP
 
