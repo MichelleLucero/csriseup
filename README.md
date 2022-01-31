@@ -1,29 +1,27 @@
-# CSRiseUp
+# Csriseup
 
-## MVP Section
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
-### Project Description
+## Development server
 
-Are you a person looking for a job? Are you having trouble tracking all the places you applied to? Look no further! We have your back! You can track all you application in one place and be organized throughout your job search process
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### User Stories
-- As a user, I should be able to add a job.
-- As a user, I should be able to update my status for a job.
-- As a user, I should be able to update a to no longer interested or rejected, so that I can focus on the jobs I'm currently applying to.
-- As a user, I should be able to filter the jobs by closed opportunities, so that I reference the jobs that I've applied to in the past.
-- As a user, I should be able to filter the jobs by open opportunities, so that I can focus on the jobs I'm currently applying to.
-### ERD
+## Code scaffolding
 
-![](planning/erd.png)
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### Wireframes
+## Build
 
-![](planning/home.jpg)
-![](planning/add-job-form.jpg)
-![](planning/update-job-form.jpg)
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Beyond MVP
+## Running unit tests
 
-### Project Description
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Are you a tech person looking for a career in Computer Science? Are you having trouble tracking all the places you submitted your applications to and/or all the leetcode problems you've done so far? Look no further! CSRiseUp has your back! You can track all your applications and leetcode in one place. Be organized throughout your job search process and rise up in CS.
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
