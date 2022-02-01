@@ -1,13 +1,11 @@
-<!-- TODO: Open/Closed togger -->
 <ul class="nav nav-tabs nav-fill">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Open</a>
+      <a (click)="toggleTab(1)" [ngClass]="{'active': tab==='tab1'}" class="nav-link">Open</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Closed</a>
+      <a (click)="toggleTab(2)" [ngClass]="{'active': tab==='tab2'}" class="nav-link">Closed</a>
     </li>
 </ul>
-<!-- TODO: Open/Closed togger -->
 <table class="table">
     <thead class="table-dark">
         <tr>
