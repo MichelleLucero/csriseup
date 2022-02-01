@@ -9,9 +9,16 @@ import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AuthService } from './auth/auth.service';
 import { LoginComponent } from './auth/login/login.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, RegisterComponent, LoginComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    RegisterComponent,
+    LoginComponent,
+    HomeComponent,
+  ],
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [AuthService],
   bootstrap: [AppComponent],
