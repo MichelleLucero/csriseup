@@ -13,6 +13,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './auth/auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { UserService } from './user.service';
+import { JobsComponent } from './jobs/jobs.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { TokenInterceptorService } from './token-interceptor.service';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
+    JobsComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [
@@ -31,6 +34,7 @@ import { TokenInterceptorService } from './token-interceptor.service';
       useClass: TokenInterceptorService,
       multi: true,
     },
+    UserService,
   ],
   bootstrap: [AppComponent],
 })
