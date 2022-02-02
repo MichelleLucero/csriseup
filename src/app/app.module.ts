@@ -15,6 +15,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { UserService } from './user.service';
 import { JobsComponent } from './jobs/jobs.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { JobsComponent } from './jobs/jobs.component';
     LoginComponent,
     HomeComponent,
     JobsComponent,
+    DashboardComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [
