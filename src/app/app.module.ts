@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 // removed HTTP_INTERCEPTORS
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -16,6 +15,11 @@ import { TokenInterceptorService } from './token-interceptor.service';
 import { UserService } from './user.service';
 import { JobsComponent } from './jobs/jobs.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddJobComponent } from './add-job/add-job.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -26,8 +30,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HomeComponent,
     JobsComponent,
     DashboardComponent,
+    AddJobComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule,
+  ],
   providers: [
     AuthService,
     AuthGuard,
