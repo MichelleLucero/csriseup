@@ -1,4 +1,4 @@
-<div class="pt-5">
+<!-- <div class="pt-5">
     <div class="col-md-6 mx-auto">
         <div class="card rounded-0">
             <div class="card-header">
@@ -24,4 +24,27 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+<div class="" fxLayout="" fxLayoutAlign="center center">
+
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+  
+      <form class="">
+        <mat-card-content>
+          <mat-form-field class="">
+            <input [(ngModel)]="loginUserData.email" name="email" matInput placeholder="Email">
+          </mat-form-field>
+  
+          <mat-form-field class="">
+            <input [(ngModel)]="loginUserData.password" name="password" type="password" matInput placeholder="Password">
+          </mat-form-field>
+        </mat-card-content>
+        <button (click)="loginUser()" mat-stroked-button color="accent" class="btn-block">Login</button>
+      </form>
+    </mat-card>
+  
+  </div>
