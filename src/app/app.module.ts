@@ -18,6 +18,7 @@ import { JobsComponent } from './jobs/jobs.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddJobComponent } from './add-job/add-job.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [
     AuthService,
