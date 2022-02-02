@@ -8,20 +8,16 @@ import { Router } from '@angular/router';
 })
 export class JobsComponent implements OnInit {
   @Input() jobs: any;
-  tab: any = 'tab1';
+  isOpen: boolean = true;
 
   constructor(private router: Router) {}
 
-  toggleTab(check: boolean) {
-    if (check === true) {
-      this.tab = 'tab1';
-    } else {
-      this.tab = 'tab2';
-    }
+  toggleTab(isOpen: boolean) {
+    this.isOpen = isOpen;
   }
 
   filterJobs() {
-    return this.jobs.filter((job: any) => job.open === (this.tab === 'tab1'));
+    return this.jobs.filter((job: any) => job.open === this.isOpen);
   }
 
   ngOnInit(): void {}

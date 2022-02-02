@@ -1,9 +1,9 @@
 <ul class="nav nav-tabs nav-fill">
     <li class="nav-item">
-      <a (click)="toggleTab(true)" [ngClass]="{'active': tab==='tab1'}" class="nav-link">Open</a>
+      <a (click)="toggleTab(true)" [ngClass]="{'active': isOpen===true}" class="nav-link">Open</a>
     </li>
     <li class="nav-item">
-      <a (click)="toggleTab(false)" [ngClass]="{'active': tab==='tab2'}" class="nav-link">Closed</a>
+      <a (click)="toggleTab(false)" [ngClass]="{'active': isOpen===false}" class="nav-link">Closed</a>
     </li>
 </ul>
 <table class="table">
