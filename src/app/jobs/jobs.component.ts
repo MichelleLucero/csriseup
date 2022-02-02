@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class JobsComponent implements OnInit {
   @Input() jobs: any;
-  isOpen: boolean = true;
+  isOpen: number | null = 0;
   displayedColumns: string[] = [
     'lastUpdate',
     'position',
@@ -20,12 +20,12 @@ export class JobsComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  toggleTab(isOpen: boolean) {
+  toggleTab(isOpen: number | null) {
     this.isOpen = isOpen;
   }
 
   filterJobs() {
-    return this.jobs.filter((job: any) => job.open === this.isOpen);
+    return this.jobs.filter((job: any) => job.open === (this.isOpen === 0));
   }
 
   ngOnInit(): void {}
