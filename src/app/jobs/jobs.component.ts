@@ -9,6 +9,14 @@ import { Router } from '@angular/router';
 export class JobsComponent implements OnInit {
   @Input() jobs: any;
   isOpen: boolean = true;
+  displayedColumns: string[] = [
+    'lastUpdate',
+    'position',
+    'company',
+    'status',
+    'jobLink',
+    'update',
+  ];
 
   constructor(private router: Router) {}
 
