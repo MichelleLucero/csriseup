@@ -16,6 +16,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
 import { UserService } from './user.service';
 import { JobsComponent } from './jobs/jobs.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddJobComponent } from './add-job/add-job.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HomeComponent,
     JobsComponent,
     DashboardComponent,
+    AddJobComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+  ],
   providers: [
     AuthService,
     AuthGuard,
