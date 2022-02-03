@@ -1,0 +1,20 @@
+<form class="">
+  <mat-card-content>
+    <mat-form-field class="">
+      <input [(ngModel)]="jobData.position" name="position" matInput placeholder="Position">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="">
+      <input [(ngModel)]="jobData.company" name="company" matInput placeholder="Company">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="">
+      <input [(ngModel)]="jobData.jobLink" name="jobLink" matInput placeholder="Job Description Link">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="">
+      <input [(ngModel)]="jobData.status" name="position" matInput placeholder="Status">
+    </mat-form-field>
+  </mat-card-content>
+  <button (click)="createJob()" mat-stroked-button color="accent" class="btn-block">Add Job</button>
+</form>

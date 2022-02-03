@@ -32,6 +32,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     DashboardComponent,
     AddJobComponent,
   ],
+  entryComponents: [AddJobComponent],
   imports: [
     BrowserModule,
     FormsModule,
