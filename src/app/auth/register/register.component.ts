@@ -11,7 +11,9 @@ export class RegisterComponent implements OnInit {
   registerUserData: any = {};
   constructor(private _auth: AuthService, private _router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this._auth.logoutUser();
+  }
 
   registerUser() {
     this._auth.registerUser(this.registerUserData).subscribe(
