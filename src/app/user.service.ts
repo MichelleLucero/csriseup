@@ -16,4 +16,12 @@ export class UserService {
   createJob(jobData: any): Observable<any[]> {
     return this.http.post<any>(this._jobsUrl, jobData);
   }
+
+  updateJob(id: string, jobData: any): Observable<any[]> {
+    return this.http.put<any>(`${this._jobsUrl}/${id}`, jobData);
+  }
+
+  deleteJob(id: string): Observable<any> {
+    return this.http.delete(this._jobsUrl + id);
+  }
 }
