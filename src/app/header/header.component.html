@@ -21,11 +21,14 @@
     </div>
     <div>
         <ul>
-            <li class="nav-item">
+            <li *ngIf="!isLoggedIn()" class="nav-item">
                 <a routerLink="/login" class="nav-link">LOGIN</a>
             </li>
-            <li class="nav-item">
+            <li *ngIf="!isLoggedIn()" class="nav-item">
                 <a routerLink="/register" class="nav-link">REGISTER</a>
+            </li>
+            <li *ngIf="isLoggedIn()" class="nav-item">
+                <a routerLink="/login" class="nav-link">LOGOUT</a>
             </li>
         </ul>
     </div>
