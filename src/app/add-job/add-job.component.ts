@@ -10,6 +10,7 @@ import { map, startWith } from 'rxjs/operators';
   styleUrls: ['./add-job.component.css'],
 })
 export class AddJobComponent implements OnInit {
+  jobData: any;
   myControl = new FormControl();
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions: any;

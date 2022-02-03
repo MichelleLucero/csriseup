@@ -2,17 +2,17 @@
     <p>
         <mat-form-field class="" appearance="fill">
             <mat-label>Position</mat-label>
-            <input matInput>
+            <input [(ngModel)]="jobData.position" name="position" matInput>
         </mat-form-field>
         <br>
         <mat-form-field class="" appearance="fill">
             <mat-label>Company</mat-label>
-            <input matInput>
+            <input [(ngModel)]="jobData.company" name="company" matInput>
         </mat-form-field>
         <br>
         <mat-form-field class="" appearance="fill">
             <mat-label>Job Description Link</mat-label>
-            <input matInput>
+            <input [(ngModel)]="jobData.jobLink" name="jobLink" matInput>
         </mat-form-field>
         <br>
         <mat-form-field class="example-full-width" appearance="fill">
@@ -21,6 +21,8 @@
                    placeholder="Pick one"
                    aria-label="Status"
                    matInput
+                   [(ngModel)]="jobData.status" 
+                   name="status"
                    [formControl]="myControl"
                    [matAutocomplete]="auto">
             <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
