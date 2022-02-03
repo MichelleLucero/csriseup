@@ -1,5 +1,5 @@
 <div>
     <app-dashboard [jobs]="jobs"></app-dashboard>
-    <app-add-job></app-add-job>
+    <button mat-raised-button (click)="onOpen()">Add Job</button>
     <app-jobs [jobs]="jobs"></app-jobs>
 </div>

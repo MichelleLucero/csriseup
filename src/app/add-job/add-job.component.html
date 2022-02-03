@@ -1,0 +1,34 @@
+<form class="example-form">
+    <p>
+        <mat-form-field class="" appearance="fill">
+            <mat-label>Position</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="" appearance="fill">
+            <mat-label>Company</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="" appearance="fill">
+            <mat-label>Job Description Link</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Status</mat-label>
+            <input type="text"
+                   placeholder="Pick one"
+                   aria-label="Status"
+                   matInput
+                   [formControl]="myControl"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+    </p>
+    <button (click)="onSubmit()" mat-stroked-button color="primary">Submit</button>
+</form>
