@@ -1,36 +1,20 @@
-<form class="example-form">
-    <p>
-        <mat-form-field class="" appearance="fill">
-            <mat-label>Position</mat-label>
-            <input [(ngModel)]="jobData.position" name="position" matInput>
-        </mat-form-field>
-        <br>
-        <mat-form-field class="" appearance="fill">
-            <mat-label>Company</mat-label>
-            <input [(ngModel)]="jobData.company" name="company" matInput>
-        </mat-form-field>
-        <br>
-        <mat-form-field class="" appearance="fill">
-            <mat-label>Job Description Link</mat-label>
-            <input [(ngModel)]="jobData.jobLink" name="jobLink" matInput>
-        </mat-form-field>
-        <br>
-        <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Status</mat-label>
-            <input type="text"
-                   placeholder="Pick one"
-                   aria-label="Status"
-                   matInput
-                   [(ngModel)]="jobData.status" 
-                   name="status"
-                   [formControl]="myControl"
-                   [matAutocomplete]="auto">
-            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                {{option}}
-              </mat-option>
-            </mat-autocomplete>
-          </mat-form-field>
-    </p>
-    <button (click)="onSubmit()" mat-stroked-button color="primary">Submit</button>
+<form class="">
+  <mat-card-content>
+    <mat-form-field class="">
+      <input [(ngModel)]="jobData.position" name="position" matInput placeholder="Position">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="">
+      <input [(ngModel)]="jobData.company" name="company" matInput placeholder="Company">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="">
+      <input [(ngModel)]="jobData.jobLink" name="jobLink" matInput placeholder="Job Description Link">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="">
+      <input [(ngModel)]="jobData.status" name="position" matInput placeholder="Status">
+    </mat-form-field>
+  </mat-card-content>
+  <button (click)="createJob()" mat-stroked-button color="accent" class="btn-block">Add Job</button>
 </form>

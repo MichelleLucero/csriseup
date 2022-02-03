@@ -1,8 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-add-job',
@@ -10,32 +8,25 @@ import { map, startWith } from 'rxjs/operators';
   styleUrls: ['./add-job.component.css'],
 })
 export class AddJobComponent implements OnInit {
-  jobData: any;
-  myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
-  filteredOptions: any;
+  jobData: any = {};
 
   constructor(
-    @Inject(MAT_DIALOG_DATA) private data: any,
-    private matDialogRef: MatDialogRef<AddJobComponent>
+    private matDialogRef: MatDialogRef<AddJobComponent>,
+    private userService: UserService
   ) {}
 
-  ngOnInit(): void {
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map((value) => this._filter(value))
+  ngOnInit(): void {}
+
+  createJob() {
+    this.userService.createJob(this.jobData).subscribe(
+      (res) => {
+        console.log(res);
+      },
+      (err) => {
+        console.log(err);
+      }
     );
-  }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.options.filter((option) =>
-      option.toLowerCase().includes(filterValue)
-    );
-  }
-
-  onSubmit() {
     this.matDialogRef.close();
   }
 }
