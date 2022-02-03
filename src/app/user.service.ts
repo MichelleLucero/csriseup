@@ -18,7 +18,7 @@ export class UserService {
   }
 
   updateJob(id: string, jobData: any): Observable<any[]> {
-    return this.http.put<any>(this._jobsUrl + id, jobData);
+    return this.http.put<any>(`${this._jobsUrl}/${id}`, jobData);
   }
 
   deleteJob(id: string): Observable<any> {

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { UpdateJobComponent } from '../update-job/update-job.component';
 
 @Component({
   selector: 'app-jobs',
@@ -18,7 +20,7 @@ export class JobsComponent implements OnInit {
     'update',
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private matDialog: MatDialog) {}
 
   toggleTab(isOpen: number | null) {
     this.isOpen = isOpen;
@@ -26,6 +28,10 @@ export class JobsComponent implements OnInit {
 
   filterJobs() {
     return this.jobs.filter((job: any) => job.open === (this.isOpen === 0));
+  }
+
+  onOpen(jobId: string) {
+    this.matDialog.open(UpdateJobComponent, { data: jobId });
   }
 
   ngOnInit(): void {}

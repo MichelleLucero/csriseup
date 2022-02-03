@@ -44,8 +44,7 @@
   <ng-container matColumnDef="update">
     <th mat-header-cell *matHeaderCellDef> Update </th>
     <td mat-cell *matCellDef="let job">
-      <p>{{job.id}}</p>
-      <button color="primary" mat-stroked-button>Update</button>
+      <button color="primary" mat-stroked-button (click)="onOpen(job.id)">Update</button>
     </td>
   </ng-container>
 

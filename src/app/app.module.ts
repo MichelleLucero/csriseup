@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { UpdateJobComponent } from './update-job/update-job.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     JobsComponent,
     DashboardComponent,
     AddJobComponent,
+    UpdateJobComponent,
   ],
   entryComponents: [AddJobComponent],
   imports: [
