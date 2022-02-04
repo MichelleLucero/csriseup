@@ -32,6 +32,19 @@ Are you a person looking for a job? Are you having trouble tracking all the plac
 |  ![](add-job-form.jpg)   |  ![](add-job-form-reality.jpg)   |
 | ![](update-job-form.jpg) | ![](update-job-form-reality.jpg) |
 
+### Demo
+[Demo](https://csriseup.herokuapp.com/)
+
+### MVP Hurdles
+- User authentication
+  - debugger
+  - inspect network activity
+  
+- How will user update jobs?
+
+- Finding out Boostrap was incompatible with Angular
+  - Angular Material
+
 ## Beyond MVP
 
 ### Project Description
