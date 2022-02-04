@@ -4,7 +4,7 @@
 
 ### Project Description
 
-Are you a person looking for a job? Are you having trouble tracking all the places you applied to? Look no further! We have your back! You can track all you application in one place and be organized throughout your job search process
+Are you a person looking for a job? Are you having trouble tracking all the places you applied to? Look no further! We have your back! You can track all your applications in one place and be organized throughout your job search process
 
 ### User Stories
 - As a user, I should be able to add a job.
