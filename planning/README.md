@@ -9,6 +9,7 @@ Are you a person looking for a job? Are you having trouble tracking all the plac
 ### User Stories
 
 - As a user, I should be able to add a job.
+
   ![Alt Text](add-job.gif "Demo")
 - As a user, I should be able to update my status for a job.
 - As a user, I should be able to update a to no longer interested or rejected, so that I can focus on the jobs I'm currently applying to.
