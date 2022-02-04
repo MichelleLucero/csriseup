@@ -3,7 +3,7 @@
   <mat-tab label="Closed"></mat-tab>
 </mat-tab-group>
 
-<table mat-table [dataSource]="filterJobs()" class="mat-elevation-z8">
+<table mat-table [dataSource]="filterJobs()" class="mat-elevation-z0">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
@@ -36,7 +36,7 @@
   <ng-container matColumnDef="jobLink">
     <th mat-header-cell *matHeaderCellDef> Job Link </th>
     <td mat-cell *matCellDef="let job">
-      <button color="primary" mat-stroked-button> <a href={{job.jobLink}}>Job link</a></button>  
+      <a color="primary" mat-stroked-button href={{job.jobLink}}>Job Link</a>
     </td>
   </ng-container>
 
@@ -51,5 +51,3 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
-<!-- <a class="btn btn-primary" href={{job.jobLink}} role="button">Link</a> -->

@@ -26,8 +26,17 @@ export class JobsComponent implements OnInit {
     this.isOpen = isOpen;
   }
 
+  byDate(a: any, b: any) {
+    //chronologically by year, month, the day
+    return (
+      new Date(b.lastUpdated).valueOf() - new Date(a.lastUpdated).valueOf()
+    ); // timestamps
+  }
+
   filterJobs() {
-    return this.jobs.filter((job: any) => job.open === (this.isOpen === 0));
+    return this.jobs
+      .filter((job: any) => job.open === (this.isOpen === 0))
+      .sort(this.byDate);
   }
 
   onOpen(jobId: string) {
