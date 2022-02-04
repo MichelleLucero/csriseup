@@ -1,5 +1,10 @@
 <div>
     <app-dashboard [jobs]="jobs"></app-dashboard>
-    <button mat-raised-button (click)="onOpen()">Add Job</button>
-    <app-jobs [jobs]="jobs"></app-jobs>
+    <div class="container">
+        <div class="btn-box">
+            <button mat-raised-button color="primary" (click)="onOpen()"><mat-icon>add_circle_outline</mat-icon> Add Job</button>
+        </div>
+        <app-jobs [jobs]="jobs"></app-jobs>
+
+    </div>
 </div>
