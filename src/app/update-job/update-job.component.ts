@@ -9,15 +9,29 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./update-job.component.css'],
 })
 export class UpdateJobComponent implements OnInit {
+  oldJobData: any = {};
   jobData: any = {};
   open: string = 'open';
   constructor(
     @Inject(MAT_DIALOG_DATA) public jobId: string,
     private matDialogRef: MatDialogRef<UpdateJobComponent>,
     private userService: UserService
-  ) {}
+  ) {
+    this.getJob();
+  }
 
   ngOnInit(): void {}
+
+  getJob() {
+    this.userService.getJob(this.jobId).subscribe(
+      (res) => {
+        this.oldJobData = res;
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
 
   updateJob() {
     this.jobData.open = this.open === 'open';
@@ -33,5 +47,3 @@ export class UpdateJobComponent implements OnInit {
     this.matDialogRef.close();
   }
 }
-
-// https://www.linkedin.com/jobs/collections/recommended/?currentJobId=2798023683

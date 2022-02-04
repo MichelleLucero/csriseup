@@ -1,19 +1,19 @@
 <form class="">
     <mat-card-content>
         <mat-form-field class="">
-            <input [(ngModel)]="jobData.position" name="position" matInput placeholder="Position">
+            <input [(ngModel)]="jobData.position" name="position" value={{oldJobData?.position?.position}}  matInput placeholder="Position">
         </mat-form-field>
         <br>
         <mat-form-field class="">
-            <input [(ngModel)]="jobData.company" name="company" matInput placeholder="Company">
+            <input [(ngModel)]="jobData.company" name="company" value={{oldJobData?.company?.company}} matInput placeholder="Company">
         </mat-form-field>
         <br>
         <mat-form-field class="">
-            <input [(ngModel)]="jobData.jobLink" name="jobLink" matInput placeholder="Job Description Link">
+            <input [(ngModel)]="jobData.jobLink" name="jobLink" value={{oldJobData?.jobLink}} matInput placeholder="Job Description Link">
         </mat-form-field>
         <br>
         <mat-form-field class="">
-            <input [(ngModel)]="jobData.status" name="position" matInput placeholder="Status">
+            <input [(ngModel)]="jobData.status" name="status"  value={{oldJobData?.status?.status}} matInput placeholder="Status">
         </mat-form-field>
         <br>
         <mat-radio-group aria-label="Select an option" [(ngModel)]="open" name="open">
